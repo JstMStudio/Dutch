@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+<head>
+<title>Documentatie</title>
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="../dropdown.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+  background-image: url("https://github.com/JstMStudio/New-Platform/blob/main/background%202.gif?raw=true");
+background-repeat: no-repeat;
+background-attachment: fixed; 
+background-size: cover;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #34eb9e;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: pink;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.contentbox {
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+background-color: yellow;
+border: 6px solid red;
+color: green;
+padding: 8px;
+}
+
+.navbutton {
+padding:3px;
+font-weight: bold;
+color: purple;
+float: left;
+}
+
+.navbutton:hover {
+padding:3px;
+font-weight: bold;
+color: green;
+float: left;
+}
+
+.navbutton:active {
+padding:3px;
+font-weight: bold;
+color: red;
+float: left;
+}
+
+/* Theme ovveride */
+
+.collapsible {
+  cursor: pointer;
+  border: none;
+  padding:13px;
+  text-align: left;
+  outline: none;
+  font-size: 11px;
+position: -webkit-sticky; /* Safari */
+  position: sticky;
+  bottom: 0;
+  background-color:#033d0b;
+  color: cyan;
+    z-index:150;
+    position: fixed;
+    _position:absolute;
+    _top:expression(eval(document.documentElement.scrollTop+
+        (document.documentElement.clientHeight-this.offsetHeight)));
+        right: 5px;
+        box-shadow: 5px 5px grey;
+        margin-bottom:10px;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: silver;
+  position: -webkit-sticky; /* Safari */
+  background-color:#03373d;
+  text-align: center;
+  color: cyan;
+      position:fixed;
+    z-index:150;
+    _position:absolute;
+    _top:expression(eval(document.documentElement.scrollTop+
+        (document.documentElement.clientHeight-this.offsetHeight)));
+        right: 0;
+        bottom: 0;
+        font-weight: bold;
+}
+
+.active {
+  bottom:200px;
+          box-shadow: none;
+          margin-bottom:0px;
+}
+
+.dark-mode .contentbox {
+  background-color: black;
+  color: cyan;
+}
+
+.red-mode .contentbox {
+  background-color: red;
+}
+
+.blue-mode .contentbox {
+  background-color: blue;
+  color: cyan;
+}
+
+.green-mode .contentbox {
+  background-color: green;
+  color: yellow;
+}
+
+.yellow-mode .contentbox {
+  background-color: yellow;
+  color: green;
+}
+
+.orange-mode .contentbox {
+  background-color: orange;
+  color: blue;
+}
+
+.purple-mode .contentbox {
+  background-color: purple;
+  color: cyan;
+}
+
+.magenta-mode .contentbox {
+  background-color: magenta;
+  color: #1a2b22;
+}
+  
+.text-black .contentbox {
+  color: black;
+}
+
+.text-red .contentbox {
+  color: red;
+}
+
+.text-blue .contentbox {
+  color: blue;
+}
+
+.text-green .contentbox {
+  color: green;
+}
+
+.text-yellow .contentbox {
+  color: yellow;
+}
+
+.text-orange .contentbox {
+  color: orange;
+}
+
+.text-purple .contentbox {
+  color: purple;
+}
+
+.text-magenta .contentbox {
+  color: magenta;
+}
+
+.button2 {
+float:center;
+background-color: black;
+  color: red;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  color: yellow;
+}
+
+/* Theme override */
+.overlay {
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+    width: 0;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0, 0.9);
+  background-color: #E4E9F7;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content{
+  position: relative;
+  top: 8%;
+  width: 100%;
+  margin-top: 30px;
+  text-align: center;
+  color:green;
+  font-size: 18px;
+  display: block;
+  transition: 0.3s;
+  padding:10px;
+}
+
+.overlay-content p{
+padding:16px;
+text-align: center;
+padding-right: 20px;
+}
+
+.overlay-content li{
+text-align:left;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: green;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+.collapsible2 {
+  cursor: pointer;
+  outline: none; 
+  font-size:16px;
+  background-color:cyan;
+  width:100%;
+  text-align:center;
+  color:purple;
+  padding:10px;
+  font-weight: bold;
+  border-style: solid;
+}
+
+.content2 {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: cyan;
+  color: purple;
+  font-weight: bold;
+  text-align:center;
+  font-size: 18px;
+}
+
+.collapsible2 .active {
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL button {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: yellow;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: green;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+.button {
+  border-radius: 4px;
+  background-color: green;
+  border: none;
+  color: yellow;
+  text-align: center;
+  font-size: 28px;
+  padding: 10px;
+  width: 350px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL button {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: yellow;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: green;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL button {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: yellow;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: green;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+.collapsible2 {
+  font-size: 15px;
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: yellow;
+  font-size: 18px;
+  padding: 12px;
+  color: green;
+  width: 100%
+}
+
+.content2 {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: blue;
+  text-align:center;
+  color: yellow;
+}
+
+/* Directory Content */
+
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL button {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: yellow;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: green;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+.collapsible3 {
+  background-color: blue;
+  color: yellow;
+  cursor: pointer;
+  padding: 18px;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+  width:100%;
+}
+
+.content3 {
+  padding: 10px;
+  display: none;
+  overflow: hidden;
+  background-color: green;
+  text-align: center;
+  color: yellow;
+}
+
+.dictionary {
+  color: blue;
+  max-width: 400px;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+h1 {
+  margin-top: 0;
+  text-align: center;
+}
+.txtBox {
+  appearance: none;
+  -webkit-appearance:none;
+  font-size:16px;
+  padding: 15px;
+  width:100%;
+}
+.submit-btn {
+  appearance: none;
+  -webkit-appearance:none;
+  padding: 15px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: grey;
+  color: #fff;
+  font-size: 15px;
+  height: 100%;
+}
+form {
+  position: relative;
+}
+.search-result{
+  padding:20px;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+</style>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+<h2 style="color: cyan;text-align:center;">JstMStudio-platform</h2>
+   <a href="index.html">Thuis</a>
+   <a href="about.html">Over</a>
+   <a href="client.html">Klant</a>
+   <a href="documentation.html">Documentatie</a>
+   <a href="app.html">App</a>
+</div>
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav11()">&times;</a>
+  <div class="overlay-content">
+<h1>Over</h1>
+<p>JstMStudio is een kleine studio opgericht door Jst Tan. JstMStudio is op veel dingen gericht, van muziek, het schrijven van verhalen, website-ontwikkeling en nog veel meer. JstMStudio is een kleine afgelegen indiestudio die zich op veel dingen richt om een betere toekomst op te bouwen. </p>
+  </div>
+</div>
+
+<div id="myNav1" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav1()">&times;</a>
+  <div class="overlay-content">
+    <h1>Contact</h1>
+     <p>Wilt u contact opnemen met JstMStudio? Het team biedt momenteel meerdere manieren voor iedereen om contact op te nemen met het team. Neem contact met ons op voor belangrijke dingen zoals ondersteuning, feedback, suggesties en bugrapporten en niet voor niet-belangrijke inhoud zoals spam. We zijn een klein team, dus we kunnen het druk hebben met het veroorzaken van een laat antwoord van het team, dus wees geduldig. We antwoorden ook alleen tijdens onze officiële kantooruren.</p>
+     <br>
+     <hr>
+     <br>
+     <h1>Officiële contactgegevens<h1>
+     <br>
+       <h3><a href="https://m.me/106374745315761">Boodschapper</a></h3>
+       <p>We hebben een Messenger-contactservice voorzien voor alle Facebook-gebruikers om contact op te nemen met het JstMStudio-ontwikkelaarsteam. U kunt rechtstreeks contact met ons opnemen via Messenger.</p>
+       <br>
+       <h3><a href="https://twitter.com/messages/compose?recipient_id=1496024914431602690">Twitter</a></h3>
+       <p>Voor degenen die Twitter gebruiken, biedt JstMStudio ook een contactservice op Twitter. Ook daar zijn we actief.</p>
+  </div>
+</div>
+
+<div id="myNav2" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+  <div class="overlay-content">
+<h1>Bijdragen aan JstMStudio</h1>
+<p>Er zijn veel dingen die je zou kunnen helpen en bijdragen aan JstMStudio-projecten en de twam helpen. Elke hulp en bijdrage aan onze projecten wordt door ons op prijs gesteld, of het nu gaat om een kleine typefout of een fout van het team.</p>
+<br>
+<hr>
+<br>
+<h2>Bugs rapporteren</h2>
+<p>Een manier om zonder technische kennis bij te dragen aan het project, is door bugs aan het team te melden. Als je een bug op onze website of software hebt gevonden, maak dan een Github-probleem aan of stuur ons een e-mail en meld het. Het zou ons enorm helpen door onze software te verbeteren, zodat iedereen deze soepeler kan gebruiken.<br><br>Als je zou kunnen, zou je ons ook kunnen helpen met het oplossen van gerapporteerde bugs wanneer we de bugs nog niet hebben opgelost. Het zou het team zeker enorm helpen om tijd en moeite te besparen bij het vinden van bugs. Nadat u klaar bent met programmeren, kunt u een pull-verzoek indienen voor een van onze vrijwilligers om het goed te keuren en te implementeren. </p>
+<br>
+<hr>
+<br>
+<h2>Inhoud toevoegen aan JstMStudio-software</h2>
+<p>U kunt bijdragen aan het project door inhoud toe te voegen aan onze software. U kunt sites of projecten indienen bij onze zoekmachine, video's, muziek en boeken toevoegen aan onze inhoudsbibliotheek zodat iedereen ervan kan genieten, enzovoort.</p>
+<br>
+<hr>
+<br>
+<h2>Codes</h2>
+<p>Als u een ontwikkelaar bent, kunt u ons ook helpen onze software te verbeteren, zoals het verbeteren van onze gebruikersinterface, helpen bij het ontwikkelen en bouwen van onze aankomende nieuwe functies en projecten met het team, enz. U kunt ook helpen en bijdragen aan het creëren van meer functies voor onze ook huidige diensten. </p>
+  </div>
+</div>
+
+<div id="myNav3" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav3()">&times;</a>
+  <div class="overlay-content">
+<h1>Doneren</h1>
+<p>JstMStudio wordt gefinancierd door mensen zoals jij. We verkopen geen gebruikersgegevens, spammen uw scherm niet met advertenties of vergrendelen dingen in de betaalmuur. Wij niet en wij vinden het vervelend. We worden gefinancierd via de verkoop van websites en donaties. Als je het project wilt steunen, doneer dan alsjeblieft een tientje of twee aan ons. Het betekent misschien minder voor u, maar het betekent veel voor ons. <br><br>
+We bieden momenteel twee methoden voor iedereen om ons te helpen, te steunen en te doneren. U kunt aan ons doneren via <a href="https://www.buymeacoffee.com/jestonjst">Buy Me A Coffee</a> en <a href="https://ko-fi.com/R6R8BLGHG" >KoFi</a>. U kunt ons steunen door eenmalig of maandelijks te doneren.
+    </p>
+      <br><br>
+      <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="jestonjst" data-color="#40DCA5" data-emoji=""  data-font="Lato" data-text="Buy me a drink" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
+      <br><br>
+      <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi', '#28e032', 'R6R8BLGHG');kofiwidget2.draw();</script> 
+  </div>
+</div>
+
+<div id="myNav4" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav4()">&times;</a>
+  <div class="overlay-content">
+<h1>Veelgestelde vraag</h1>
+<p>Er zijn veel veelgestelde vragen van de JstMStudio-gemeenschap. We zouden elke vraag hier uitleggen. Er is een kans dat uw vraag waar u naar op zoek was, hier ook direct wordt beantwoord. Alle antwoorden waren ook door het team geschreven. </p>
+<br>
+<hr>
+<br>
+<button type="button" class="collapsible2"><h2>Waarom bestaat JstMStudio?</h2></button>
+<div class="content2">
+   <p>JstMStudio is opgericht door Jst Tan. JstMStudio was bedoeld om websites te verkopen voor een marge van de prijs die de concurrent bood. </p>
+</div>
+<button type="button" class="collapsible2"><h2>Hoe verdient en financiert JstMStudio geld?</h2></button>
+<div class="content2">
+   <p>JstMStudio genereert inkomsten op tal van privacyvriendelijke manieren, zoals donaties, sponsoring, statische advertenties enzovoort. We worden grotendeels gefinancierd door donaties van de gemeenschap en door de verkoop van websites die we hebben gebouwd aan onze klanten en klanten. We hebben niet de intentie om een van onze door ons geleverde functies achter een betaalmuur te vergrendelen of gebruikersgegevens te verkopen. </p>
+</div>
+<button type="button" class="collapsible2"><h2>Hoe JstMStudio uit te spreken?</h2></button>
+<div class="content2">
+   <p>Luister alstublieft naar de audiobestanden die door het team zijn geleverd met de onderstaande audiospeler om te horen hoe u JstMStudio uitspreekt. De audio is gegenereerd via tekst-naar-spraak (TTS)-software en niet ingesproken door iemand van het team.</p>
+   <audio controls>
+   <bron src="pronounce.mp3" type="audio/mpeg">
+Uw browser ondersteunt het audio-element niet.
+</audio>
+    </div>
+    <script>
+    var coll = document.getElementsByClassName("collapsible2");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content2 = this.nextElementSibling;
+    if (content2.style.display === "block") {
+      content2.style.display = "none";
+    } else {
+      content2.style.display = "block";
+    }
+  });
+}
+</script>
+  </div>
+</div>
+
+<div id="myNav5" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav5()">&times;</a>
+  <div class="overlay-content">
+<h1>JstMStudio Help-artikelen</h1>
+   <p style="text-align:center;"><strong>Een plek om hulpartikelen en foutcodes te beantwoorden. Er zijn veel help-artikelcodes geleverd en gebruikt door JstMStudio. Zoek naar uw foutcodes in de zoekbalk om er informatie over te zoeken. </strong></p>
+   <br><br>
+   <table>
+     <tr>
+       <th>Titel</th>
+       <th>Codes</th>
+     </tr>
+     <tr>
+       <td>Account geblokkeerd</td>
+       <td>13841</td>
+     </tr>
+     <tr>
+       <td>Account verwijderd</td>
+       <td>67381</td>
+     </tr>
+     <tr>
+       <td>Account uitgeschakeld</td>
+       <td>89651</td>
+     </tr>
+     <tr>
+       <td>Account niet te vinden</td>
+       <td>10915</td>
+     </tr>
+     <tr>
+       <td>Donatie aanpassen</td>
+       <td>52107</td>
+     </tr>
+     <tr>
+       <td>Vereist COPPA niet dat elke software 13 moet zijn?</td>
+       <td>98106</td>
+     </tr>
+     <tr>
+       <td>Wat doet donatie?</td>
+       <td>61029</td>
+     </tr>
+     <tr>
+       <td>Insluiten</td>
+       <td>92657</td>
+     </tr>
+     <tr>
+       <td>Hoe kan ik doneren?</td>
+       <td>78526</td>
+     </tr>
+       <tr>
+       <td>Hoe oud is het vereist om JstMStudio-projecten te gebruiken?</td>
+       <td>23195</td>
+     </tr>
+     <tr>
+       <td>Betalingsverwerker</td>
+       <td>89103</td>
+    </tr>
+  </table>
+  <br><br>
+<form class="searchForm">
+<input type="search" class="txtBox">
+<input type="submit" class="submit-btn" value="submit">
+</form>
+ <div class="search-result">
+<h2 class="search-word"></h2>
+<p class="description" style="text-align:center"></p>
+  </div>
+ <script>
+const txtBox = document.querySelector(".txtBox");
+const form = document.querySelector(".searchForm");
+const searchWord = document.querySelector(".search-word");
+const description = document.querySelector(".description");
+const dictionaryJson =
+  "https://new-platform.jstmstudio.tk/English/articles.json";
+function searchDict(e) {
+  e.preventDefault();
+  fetch(dictionaryJson)
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(data) {
+      e.preventDefault;
+      let word = txtBox.value;
+      console.log(txtBox.value);
+      let searchKeyword = word.toUpperCase();
+      Object.keys(data).forEach(function(key) {
+        if (key === searchKeyword) {
+          searchWord.innerHTML = searchKeyword;
+          if(searchKeyword === data[key]){
+            description.innerHTML = "Not found";
+          }
+          else{
+             description.innerHTML = data[key];
+          }
+          
+          console.log(data[key]);
+        }
+      });
+    });
+}
+
+form.addEventListener("submit", searchDict);
+
+_.find(allmCar, (mCar) => /XYZ/.test(mCar.value));
+</script>
+  </div>
+</div>
+
+<div id="myNav7" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav7()">&times;</a>
+  <div class="overlay-content">
+  <h1>Verlenging</h1>
+       <p>JstMStudio-profiel is de allereerste sociale site die daadwerkelijk ondersteuning biedt voor extensies op gebruikersprofielen en berichten. Een extensie is een software-add-on die op een programma wordt geïnstalleerd en de mogelijkheden ervan verbetert. Gebruikers konden kiezen uit verschillende extensies om in hun profiel te gebruiken en in de JstMStudio Profile-extensiebibliotheek te posten. De JstMStudio-profielextensie is gebouwd door het officiële personeelsteam en de community.<br><br>Gebruikers kunnen alle plug-ins hier in hun code installeren door deze toe te voegen voordat de berichtelementen eindigen of op hun profiel. Installeer de plug-in door de onderstaande code te kopiëren en te plakken.</p>
+       <br>
+       <hr>
+       <br>
+       <h2>Klap</h2>
+       <p>Clap is een van de officiële extensies van het JstMStudio-profiel. Het kan worden gebruikt in berichten van JstMStudio Profile-gebruikers. Gebruikers konden applaudisseren wanneer deze plug-in was geïnstalleerd.</p>
+       <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOOne-Future-Web%2FWeb-App%2Fblob%2F068fa630ef3740efe71dba43dcd938f1395e6fce%2FExtension%2FCodes%2Fclap.html&style =github&showBorder=on&showLineNumbers=on&showCopy=on"></script>
+       <br>
+       <hr>
+       <br>
+       <h2>Reageer</h2>
+       <p>Commentaar is een van de officiële extensies van het JstMStudio-profiel. Gebruikers kunnen ze aan hun bericht toevoegen zodat de kijker er commentaar op kan geven. Gebruikers kunnen het ook gebruiken om feedback op hun bericht te krijgen.</p>
+       <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOOne-Future-Web%2FWeb-App%2Fblob%2F068fa630ef3740efe71dba43dcd938f1395e6fce%2FExtension%2FCodes%2Fcomment.html&style =github&showBorder=on&showLineNumbers=on&showCopy=on"></script>
+       <br>
+       <hr>
+       <br>
+       <h2>Vind ik leuk</h2>
+       <p>Like is een van de officiële extensies van het JstMStudio-profiel. Gebruikers konden ze aan hun post toevoegen zodat kijkers en schrijvers hun reactie op de post konden laten zien. Gebruikers kunnen ook reageren om hun steun te betuigen.</p>
+       <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOOne-Future-Web%2FWeb-App%2Fblob%2F068fa630ef3740efe71dba43dcd938f1395e6fce%2FExtension%2FCodes%2Flike.html&style =github&showBorder=on&showLineNumbers=on&showCopy=on"></script>
+       <br>
+       <hr>
+       <br>
+       <h2>Delen</h2>
+       <p>Share is een van de officiële extensies van het JstMStudio-profiel. Gebruikers kunnen ze aan hun post toevoegen zodat kijkers hun post op sociale media kunnen delen. Gebruikers kunnen ook reageren om hun steun te betuigen door het bericht te delen.</p>
+       <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOOne-Future-Web%2FWeb-App%2Fblob%2F068fa630ef3740efe71dba43dcd938f1395e6fce%2FExtension%2FCodes%2Fshare.html&style =github&showBorder=on&showLineNumbers=on&showCopy=on"></script>
+       <br>
+       <hr>
+       <br>
+       <h2>Omhoog</h2>
+       <p>Updown is een van de officiële uitbreidingen van het JstMStudio-profiel. Gebruikers konden ze aan hun berichten toevoegen zodat kijkers en schrijvers hun reacties op het bericht konden laten zien. Gebruikers konden ook reageren om hun steun te betuigen. Updown kan ook worden gebruikt voor peilingen.</p>
+      <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2FOne-Future-Web%2FWeb-App%2Fblob%2F068fa630ef3740efe71dba43dcd938f1395e6fce%2FExtension%2FCodes%2Fupdown.html&style=github&showBorder=on&showLineNumbers=on&showCopy=on"></script>  
+  </div>
+</div>
+
+<div id="myNav8" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav8()">&times;</a>
+  <div class="overlay-content">
+  <h1>API</h1>
+<p>JstMStudio leverde veel services en functies binnen onze platformsoftware, JstMStudio App Platform. JstMStudio API is een Application Programming Interface voor JstMStudio App Platform die ondersteuning biedt aan alle ontwikkelaars om diensten zoals in JstMStudio App Platform in hun website te implementeren zonder de functies zelf volledig gratis en zonder kosten te ontwikkelen. Het is gebouwd voor iedereen om te gebruiken en niet om geld te verdienen van gebruikers zoals ontwikkelaar en website-eigenaar.</p>
+<p>JstMStudio API is een open source API ( Application Programming Interface ). Iedereen kon alle JstMStudio API-broncodes bekijken, lezen en bestuderen op onze officiële Github-repository. JstMStudio API is gebouwd met behulp van HTML, CSS en vanille JavaScript, in tegenstelling tot andere traditionele API's, en gelicentieerd onder AGPL 3.0.</p>
+<button type="button" class="collapsible3">Zakelijke zoekmachine</button>
+<div class="content3">
+     <p>Business Search Engine is een service die wordt aangeboden door JstMStudio in JstMStudio Web App. U kunt naar bedrijven zoeken op JstMStudio Business Search Engine. </p>
+    
+     <p>Om de Business Search Engine op uw website in te stellen, dient u al deze codes in uw websites in te voeren. Deze codes zijn nodig om via uw site te worden gekopieerd, zodat het zou kunnen werken.</p>
+    
+     <p>Plaats deze codes in uw <code>head</code>-sectie zodat alle codes die nodig zijn op onze servers kunnen worden doorgevoerd. Het is vereist om het te laten werken, dus mis het niet.</p>
+     <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FBusiness%2Fsrc .html&style=standaard&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+     </div>
+     <p>Voeg daarna deze HTML-codes in op uw site waarin u de zakelijke zoekmachine wilt laten verschijnen, voeg deze ALLEEN in de <code>body</code>-sectie in.</p>
+     <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FBusiness%2Fcode .html&style=standaard&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+</div>
+</div>
+
+<button type="button" class="collapsible3">Rekenmachine</button>
+<div class="content3">
+     <p>Calculator is een service die wordt aangeboden door JstMStudio in JstMStudio Web App. U kunt eenvoudige en complexe wiskunde berekenen met JstMStudio Calculator op uw website. </p>
+    
+     <p>Om Calculator op uw website in te stellen, dient u al deze codes in uw websites in te voeren. Deze codes zijn nodig om via uw site te worden gekopieerd, zodat het zou kunnen werken.</p>
+    
+     <p>Plaats deze codes in uw <code>head</code>-sectie zodat alle codes die nodig zijn op onze servers kunnen worden doorgevoerd. Het is vereist om het te laten werken, dus mis het niet.</p>
+     <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FCalculator%2Fsrc .html&style=standaard&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+     </div>
+     <p>Voeg daarna deze HTML-codes in op uw site waarop u de rekenmachine wilt laten verschijnen, voeg deze ALLEEN in de <code>body</code>-sectie in.</p>
+     <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FCalculator%2Fcode .html&style=standaard&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+</div>
+</div>
+
+<button type="button" class="collapsible3">Agenda</button>
+<div class="content3">
+   <h1>Kalender</h1>
+     <p>Kalender is een service die wordt aangeboden door JstMStudio in JstMStudio Web App. U kunt gratis een kalender aan uw site toevoegen met JstMStudio Calendar. </p>
+    
+     <p>Om Agenda op uw website in te stellen, dient u al deze codes in uw websites in te voeren. Deze codes zijn nodig om via uw site te worden gekopieerd, zodat het zou kunnen werken.</p>
+    
+     <p>Plaats deze codes in uw <code>head</code>-sectie zodat alle codes die nodig zijn op onze servers kunnen worden doorgevoerd. Het is vereist om het te laten werken, dus mis het niet.</p>
+     <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FCalendar%2Fsrc .html&style=standaard&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+     </div>
+     <p>Voeg daarna deze HTML-codes in op uw site waarop u de kalender wilt weergeven, plaats deze ALLEEN in de <code>body</code>-sectie.</p>
+     <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FCalendar%2Fcode.html&style=default&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+</div>
+</div>
+
+
+<button type="button" class="collapsible3">Camera</button>
+<div class="content3">
+     <p>Camera is een service die wordt aangeboden door JstMStudio in de JstMStudio Web App. U kunt gratis een camera aan uw site toevoegen met JstMStudio Camera, zodat anderen rechtstreeks op uw site foto's kunnen maken. </p>
+    
+     <p>Om Camera op uw website in te stellen, dient u al deze codes in uw websites in te voeren. Deze codes zijn nodig om via uw site te worden gekopieerd, zodat het zou kunnen werken.</p>
+    
+     <p>Plaats deze codes in uw <code>head</code>-sectie zodat alle codes die nodig zijn op onze servers kunnen worden doorgevoerd. Het is vereist om het te laten werken, dus mis het niet.</p>
+     <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FCamera%2Fsrc .html&style=standaard&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+     </div>
+     <p>Voeg daarna deze HTML-codes in op uw site waarop u de camera wilt weergeven, plaats deze ALLEEN in de <code>body</code>-sectie.</p>
+     <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%Main-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FCamera%2Fcode .html&style=standaard&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+   </div>
+</div>
+
+<button type="button" class="collapsible3">Code-editor</button>
+<div class="content3">
+<p>Code Editor is een service die wordt aangeboden door JstMStudio in JstMStudio Web App. U kunt gratis een code-editor aan uw site toevoegen met JstMStudio Code Editor, zodat uw gebruikers hun codes op uw website kunnen bewerken.</p>
+    
+     <p>Om Code Editor op uw website in te stellen, dient u al deze codes in uw websites in te voegen. Deze codes zijn nodig om via uw site te worden gekopieerd, zodat het zou kunnen werken.</p>
+    
+     <p>Plaats deze codes in uw <code>head</code>-sectie zodat alle codes die nodig zijn op onze servers kunnen worden doorgevoerd. Het is vereist om het te laten werken, dus mis het niet.</p>
+     <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FCode%2520Editor %2Fsrc.html&style=default&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+     </div>
+     <p>Voeg daarna deze HTML-codes in op uw site waarin u de code-editor wilt laten verschijnen, voeg deze ALLEEN in de <code>body</code>-sectie in.</p>
+     <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FCode%2520Editor %2Fcode.html&style=default&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+   </div>
+</div>
+
+<button type="button" class="collapsible3">Kompas</button>
+<div class="content3">
+     <p>Compass is een service die wordt aangeboden door JstMStudio in de JstMStudio Web App. U kunt gratis een kompas aan uw site toevoegen met JstMStudio Compass. </p>
+    
+     <p>Om Compass op uw website in te stellen, dient u al deze codes in uw websites in te voeren. Deze codes zijn nodig om via uw site te worden gekopieerd, zodat het zou kunnen werken.</p>
+    
+     <p>Plaats deze codes in uw <code>head</code>-sectie zodat alle codes die nodig zijn op onze servers kunnen worden doorgevoerd. Het is vereist om het te laten werken, dus mis het niet.</p>
+     <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FCompass%2Fsrc .html&style=standaard&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+     </div>
+     <p>Voeg daarna deze HTML-codes in op uw site waarin u het kompas wilt weergeven, plaats deze ALLEEN in de <code>body</code>-sectie.</p>
+     <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FCompass%2Fcode .html&style=standaard&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+   </div>
+</div>
+
+<button type="button" class="collapsible3">Contact</button>
+<div class="content3">
+     <p>Contact is een service die wordt aangeboden door JstMStudio in de JstMStudio Web App. U kunt gratis contactbeheerservices aan uw site toevoegen met JstMStudio Contact. Gebruikers kunnen contactgegevens aan onze services toevoegen om deze op te slaan, zodat ze in de toekomst de contactgegevens van hun vrienden/klanten kunnen ophalen. Het is allemaal opgeslagen in de lokale opslag van uw browser, dus het zou niet beschikbaar zijnook voor iemand anders.</p>
+    
+     <p>Om Contact op uw website in te stellen, dient u al deze codes in uw websites in te voeren. Deze codes zijn nodig om via uw site te worden gekopieerd, zodat het zou kunnen werken.</p>
+    
+     <p>Plaats deze codes in uw <code>head</code>-sectie zodat alle codes die nodig zijn op onze servers kunnen worden doorgevoerd. Het is vereist om het te laten werken, dus mis het niet.</p>
+     <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FContact%2Fsrc .html&style=standaard&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+     </div>
+     <p>Voeg daarna deze HTML-codes in op uw site waarin u de contactpersoon wilt laten verschijnen, voeg deze ALLEEN in de <code>body</code>-sectie in.</p>
+     <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FContact%2Fcode .html&style=standaard&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+   </div>
+</div>
+
+<button type="button" class="collapsible3">Woordenboek</button>
+<div class="content3">
+<p>Dictionary is een service die wordt aangeboden door JstMStudio in JstMStudio Web App. U kunt gratis een woordenboek aan uw site toevoegen, zodat gebruikers naar een betekenis van een woord kunnen zoeken. </p>
+    
+     <p>Om een woordenboek op uw website in te stellen, dient u al deze codes in uw websites in te voeren. Deze codes zijn nodig om via uw site te worden gekopieerd, zodat het zou kunnen werken.</p>
+    
+     <p>Plaats deze codes in uw <code>head</code>-sectie zodat alle codes die nodig zijn op onze servers kunnen worden doorgevoerd. Het is vereist om het te laten werken, dus mis het niet.</p>
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FDictionary%2Fsrc .html&style=standaard&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+     <p>Voeg daarna deze HTML-codes in op uw site waarin u het woordenboek wilt weergeven, voeg deze ALLEEN in de <code>body</code>-sectie in.</p>
+     <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FDictionary%2Fcode .html&style=standaard&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+   </div>
+</div>
+
+<button type="button" class="collapsible3">Taalvertaler</button>
+<div class="content3">
+     <p>Language Translator is een service die wordt aangeboden door JstMStudio in de JstMStudio Web App. U kunt gratis een taalvertaler aan uw site toevoegen, zodat iedereen tekst rechtstreeks op uw site kan vertalen. </p>
+    
+     <p>Om een taalvertaler op uw website in te stellen, dient u al deze codes in uw websites in te voeren. Deze codes zijn nodig om via uw site te worden gekopieerd, zodat het zou kunnen werken.</p>
+    
+     <p>Plaats deze codes in uw <code>head</code>-sectie zodat alle codes die nodig zijn op onze servers kunnen worden doorgevoerd. Het is vereist om het te laten werken, dus mis het niet.</p>
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FLanguage%2520Translator %2Fsrc.html&style=default&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+     <p>Voeg daarna deze HTML-codes in op uw site waarin u de taalvertaler wilt laten verschijnen, voeg deze ALLEEN in de <code>body</code>-sectie in.</p>
+     <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FLanguage%2520Translator %2Fcode.html&style=default&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+   </div>
+   </div>
+
+<button type="button" class="collapsible3">Kaart</button>
+<div class="content3">
+<p>Map is een service die wordt aangeboden door JstMStudio in de JstMStudio Web App. U kunt gratis een kaart aan uw site toevoegen. </p>
+    
+     <p>Om een kaart op uw website in te stellen, dient u al deze codes in uw websites in te voeren. Deze codes zijn nodig om via uw site te worden gekopieerd, zodat het zou kunnen werken.</p>
+    
+     <p>Plaats deze codes in uw <code>head</code>-sectie zodat alle codes die nodig zijn op onze servers kunnen worden doorgevoerd. Het is vereist om het te laten werken, dus mis het niet.</p>
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FMap%2Fsrc .html&style=standaard&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+     <p>Voer daarna deze HTML-codes in op uw site waarop u de kaart wilt laten verschijnen, plaats deze in de <coALLEEN de>body</code> sectie.</p>
+     <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2JstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FMap%2Fcode .html&style=standaard&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+   </div>
+</div>
+
+<button type="button" class="collapsible3">Notities</button>
+<div class="content3">
+<p>Notes is een service die wordt aangeboden door JstMStudio in de JstMStudio Web App. U kunt gratis notities aan uw site toevoegen, zodat iedereen direct notities op uw site kan toevoegen. </p>
+    
+     <p>Om notities op uw website in te stellen, dient u al deze codes in uw websites in te voeren. Deze codes zijn nodig om via uw site te worden gekopieerd, zodat het zou kunnen werken.</p>
+    
+     <p>Plaats deze codes in uw <code>head</code>-sectie zodat alle codes die nodig zijn op onze servers kunnen worden doorgevoerd. Het is vereist om het te laten werken, dus mis het niet.</p>
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FNotes%2Fsrc .html&style=standaard&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+     <p>Voeg daarna deze HTML-codes in op uw site waarin u de notities wilt laten verschijnen, voeg deze ALLEEN in de <code>body</code>-sectie in.</p>
+     <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FNotes%2Fcode .html&style=standaard&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+   </div>
+   </div>
+
+<button type="button" class="collapsible3">Foto-editor</button>
+<div class="content3">
+     <p>Photo Editor is een service die wordt aangeboden door JstMStudio in de JstMStudio Web App. U kunt de foto bewerken in Photo Editor. Photo Editor wordt ook ondersteund in onze gratis API, zodat iedereen het op zijn site kan gebruiken. </p>
+     <p>Om de foto-editor op uw website in te stellen, dient u al deze codes in uw websites in te voeren. Deze codes zijn nodig om via uw site te worden gekopieerd, zodat het zou kunnen werken.</p>
+     <p>Plaats deze codes in uw <code>head</code>-sectie zodat alle codes die nodig zijn op onze servers kunnen worden doorgevoerd. Het is vereist om het te laten werken, dus mis het niet.</p>
+     <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FPhoto%2520Editor %2Fsrc.html&style=default&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+     </div>
+     <p>Voeg daarna deze HTML-codes in op uw site waarin u de foto-editor wilt laten verschijnen, plaats deze ALLEEN in de <code>body</code>-sectie.</p>
+     <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FPhoto%2520Editor %2Fcode.html&style=default&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+</div>
+</div>
+
+<button type="button" class="collapsible3">Foto-opslag</button>
+<div class="content3">
+<p>Fotoopslag is een service die wordt aangeboden door JstMStudio in de JstMStudio Web App. U kunt uw afbeeldingen uploaden en opslaan op Photo Storage. Foto-opslag wordt ook ondersteund in onze gratis API, zodat iedereen het op zijn site kan gebruiken. </p>
+     <p>Om foto-opslag op uw website in te stellen, dient u al deze codes in uw websites in te voeren. Deze codes zijn nodig om via uw site te worden gekopieerd, zodat het zou kunnen werken.</p>
+     <p>Plaats deze codes in uw <code>head</code>-sectie zodat alle codes die nodig zijn op onze servers kunnen worden doorgevoerd. Het is vereist om het te laten werken, dus mis het niet.</p>
+     <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FPhoto%2520Opslag %2Fsrc.html&style=default&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+     </div>
+     <p>Voeg daarna deze HTML-codes in op uw site waarop u de foto-opslag wilt weergeven, plaats deze ALLEEN in het <code>body</code>-gedeelte.</p>
+     <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FPhoto%2520Opslag %2Fcode.html&style=default&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+   </div>
+</div>
+
+<button type="button" class="collapsible3">QR-codegenerator</button>
+<div class="content3">
+<p>QR Code Generator is een service die wordt aangeboden door JstMStudio in de JstMStudio Web App. U kunt een QR-code genereren op de QR-codegenerator. QR Code Generator wordt ook ondersteund in onze gratis API, zodat iedereen het op zijn site kan gebruiken. </p>
+     <p>Om de qr-codegenerator op uw website in te stellen, dient u al deze codes in uw websites in te voeren. Deze codes zijn nodig om via uw site te worden gekopieerd, zodat het zou kunnen werken.</p>
+     <p>Plaats deze codes in uw <code>head</code>-sectie zodat alle codes die nodig zijn op onze servers kunnen worden doorgevoerd. Het is vereist om het te laten werken, dus mis het niet.</p>
+     <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FQR%2520Code %2520Generator%2Fsrc.html&style=default&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+     </div>
+     <p>Voeg daarna deze HTML-codes in op uw site waarop u de QR-codegenerator wilt laten verschijnen, plaats deze ALLEEN in de <code>body</code>-sectie.</p>
+     <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FQR%2520Code %2520Generator%2Fcode.html&style=default&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+</div>
+
+<button type="button" class="collapsible3">QR-codelezer</button>
+<div class="content3">
+     <h1>QR-codelezer</h1>
+     <p>QR-codelezer is een service die wordt aangeboden door JstMStudio in de JstMStudio-webapp. U kunt de QR-code lezen op de QR-codelezer. QR-codelezer wordt ook ondersteund in onze gratis API, zodat iedereen deze op zijn site kan gebruiken. </p>
+     <p>Om de qr-codelezer op uw website in te stellen, dient u al deze codes in uw websites in te voeren. Deze codes zijn nodig om via uw site te worden gekopieerd, zodat het zou kunnen werken.</p>
+     <p>Plaats deze codes in uw <code>head</code>-sectie zodat alle codes die nodig zijn op onze servers kunnen worden doorgevoerd. Het is vereist om het te laten werken, dus mis het niet.</p>
+     <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FQR%2520Code %2520Reader%2Fsrc.html&style=default&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+     </div>
+     <p>Voeg daarna deze HTML-codes in op uw site waarop u de QR-codelezer wilt weergeven, plaats deze ALLEEN in de <code>body</code>-sectie.</p>
+     <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FQR%2520Code %2520Reader%2Fcode.html&style=default&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+   </div>
+   </div>
+  
+   <button type="button" class="collapsible3">Beoordelingen</button>
+<div class="content3">
+<p>Reviews is een service die wordt aangeboden door JstMStudio in de JstMStudio Web App. U kunt gratis recensies aan uw site toevoegen, zodat gebruikers rechtstreeks op uw site naar productrecensies kunnen zoeken. </p>
+    
+     <p>Om beoordeling op uw website in te stellen, dient u al deze codes in uw websites in te voeren. Deze codes zijn nodig om via uw site te worden gekopieerd, zodat het zou kunnen werken.</p>
+    
+     <p>Plaats deze codes in uw <code>head</code>-sectie zodat alle codes die nodig zijn op onze servers kunnen worden doorgevoerd. Het is vereist om het te laten werken, dus mis het niet.</p>
+     <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FReviews%2Fsrc .html&style=standaard&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+     </div>
+     <p>Voeg daarna deze HTML-codes in op uw site waarop u de recensies wilt laten verschijnen, voeg deze ALLEEN in de <code>body</code>-sectie in.</p>
+     <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FReviews%2Fcode .html&style=standaard&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+   </div>
+</div>
+
+   <button type="button" class="collapsible3">Zoekmachine</button>
+<div class="content3">
+     <p>Zoeken is een service die wordt aangeboden door JstMStudio in de JstMStudio Web App. U kunt gratis een zoekmachine aan uw site toevoegen, zodat gebruikers op uw website gratis op internet kunnen zoeken. </p>
+    
+     <p>Om de zoekfunctie op uw website in te stellen, dient u al deze codes in uw websites in te voeren. Deze codes zijn nodig om via uw site te worden gekopieerd, zodat het zou kunnen werken.</p>
+    
+     <p>Plaats deze codes in uw <code>head</code>-sectie zodat alle codes die nodig zijn op onze servers kunnen worden doorgevoerd. Het is vereist om het te laten werken, dus mis het niet.</p>
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FSearch%2Fsrc .html&style=default&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+     </div>
+     <p>Voeg daarna deze HTML-codes in op uw site waarin u de zoekmachine wilt laten verschijnen, voeg deze ALLEEN in de <code>body</code>-sectie in.</p>
+     <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FSearch%2Fcode .html&style=standaard&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+   </div>
+</div>
+
+   <button type="button" class="collapsible3">Aandelen</button>
+<div class="content3">
+     <p>Stocks is een service die wordt aangeboden door JstMStudio in de JstMStudio Web App. U kunt gratis aandelen aan uw site toevoegen, zodat gebruikers rechtstreeks op uw site informatie over live aandelen kunnen krijgen. </p>
+    
+     <p>Om voorraden op uw website in te stellen, dient u al deze codes in uw websites in te voeren. Deze codes zijn nodig om via uw site te worden gekopieerd, zodat het zou kunnen werken.</p>
+    
+     <p>Voeg deze HTML-codes in op uw site waarop u de beoordelingen wilt weergeven, plaats deze ALLEEN in de <code>body</code>-sectie.</p>
+     <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FStocks%2Fcode .html&style=standaard&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+   </div>
+</div>
+
+   <button type="button" class="collapsible3">Teksteditor</button>
+<div class="content3">
+     <p>Text Editor is een service die wordt aangeboden door JstMStudio in JstMStudio Web App. U kunt tekst bewerken in de teksteditor. Teksteditor wordt ook ondersteund in onze gratis API, zodat iedereen het op zijn site kan gebruiken. </p>
+     <p>Om een teksteditor op uw website in te stellen, dient u al deze codes in uw websites in te voeren. Deze codes zijn nodig om via uw site te worden gekopieerd, zodat het zou kunnen werken.</p>
+     <p>Plaats deze codes in uw <code>head</code>-sectie zodat alle codes die nodig zijn op onze servers kunnen worden doorgevoerd. Het is vereist om het te laten werken, dus mis het niet.</p>
+     <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FText%2520Editor %2Fsrc.html&style=default&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+     </div>
+     <p>Voeg daarna deze HTML-codes in op uw site waarin u de teksteditor wilt laten verschijnen, voeg deze ALLEEN in de <code>body</code>-sectie in.</p>
+     <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FText%2520Editor %2Fcode.html&style=default&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+   </div>
+</div>
+
+   <button type="button" class="collapsible3">Tekst naar spraak</button>
+<div class="content3">
+<p>Tekst naar spraak is een service die wordt aangeboden door JstMStudio in de JstMStudio Web App. U kunt tekst-naar-spraak gebruiken op Tekst-naar-spraak. Tekst naar spraak wordt ook ondersteund in onze gratis API, zodat iedereen het op zijn site kan gebruiken. </p>
+     <p>Om tekst-naar-spraak op uw website in te stellen, dient u al deze codes in uw websites in te voeren. Deze codes zijn nodig om via uw site te worden gekopieerd, zodat het zou kunnen werken.</p>
+     <p>Plaats deze codes in uw <code>head</code>-sectie zodat alle codes die nodig zijn op onze servers kunnen worden doorgevoerd. Het is vereist om het te laten werken, dus mis het niet.</p>
+     <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FText%2520To %2520Speech%2Fsrc.html&style=default&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+     </div>
+     <p>Na het plakken van bovenstaande code. voer de code in waar u tekst-naar-spraak wilt weergeven. Voer ALLEEN in de <code>body</code>-sectie in.</p>
+     <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FText%2520To %2520Speech%2Fcode.html&style=default&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+   </div>
+</div>
+
+   <button type="button" class="collapsible3">To Do</button>
+<div class="content3">
+<p>To Do is een service die wordt aangeboden door JstMStudio in de JstMStudio Web App. Je zou al je takenlijst op To Do kunnen opsommen. To Do wordt ook ondersteund in onze gratis API, zodat iedereen het op zijn site kan gebruiken. </p>
+     <p>Om Taken op uw website in te stellen, dient u al deze codes in uw websites in te voeren. Deze codes zijn nodig om via uw site te worden gekopieerd, zodat het zou kunnen werken.</p>
+     <p>Voer deze codes in uw <code>head</code> sectie zodat het alle benodigde codes op onze servers kan doorgeven. Het is vereist om het te laten werken, dus mis het niet.</p>
+     <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FTo%2520Do %2Fsrc.html&style=default&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+     </div>
+     <p>Voeg daarna deze HTML-codes in op uw site waarop u de actie wilt laten verschijnen, voeg deze ALLEEN in de <code>body</code>-sectie in.</p>
+     <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FTo%2520Do %2Fcode.html&style=default&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+   </div>
+</div>
+
+   <button type="button" class="collapsible3">Weer</button>
+<div class="content3">
+<p>Weer is een service die wordt aangeboden door JstMStudio in de JstMStudio Web App. Je kunt het laatste weer van alle locaties ter wereld bekijken op Weather. Weer wordt ook ondersteund in onze gratis API, zodat iedereen het op zijn site kan gebruiken. </p>
+     <p>Om Weer op uw website in te stellen, dient u al deze codes in uw websites in te voeren. Deze codes zijn nodig om via uw site te worden gekopieerd, zodat het zou kunnen werken.</p>
+     <p>Plaats deze codes in uw <code>head</code>-sectie zodat alle codes die nodig zijn op onze servers kunnen worden doorgevoerd. Het is vereist om het te laten werken, dus mis het niet.</p>
+     <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FWeather%2Fsrc .html&style=standaard&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+     </div>
+     <p>Voeg daarna deze HTML-codes in op uw site waarin u het weer wilt weergeven, plaats deze ALLEEN in de <code>body</code>-sectie.</p>
+     <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FWeather%2Fcode .html&style=standaard&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+   </div>
+</div>
+
+   <button type="button" class="collapsible3">Witbord</button>
+<div class="content3">
+<p>Whiteboard is een service die wordt aangeboden door JstMStudio in de JstMStudio Web App. U kunt met Whiteboard in uw browser tekenen. Whiteboard wordt ook ondersteund in onze gratis API, zodat iedereen het op zijn site kan gebruiken. </p>
+     <p>Om Whiteboard op uw website in te stellen, dient u al deze codes in uw websites in te voeren. Deze codes zijn nodig om via uw site te worden gekopieerd, zodat het zou kunnen werken.</p>
+     <p>Plaats deze codes in uw <code>head</code>-sectie zodat alle codes die nodig zijn op onze servers kunnen worden doorgevoerd. Het is vereist om het te laten werken, dus mis het niet.</p>
+     <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FWhiteboard%2Fsrc .html&style=standaard&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script>
+     </div>
+     <p>Voeg daarna deze HTML-codes in op uw site waarop u het whiteboard wilt weergeven, voeg deze ALLEEN in de <code>body</code>-sectie in.</p>
+    <div style="text-align:left;">
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2FJstMStudio%2FMain-Platform%2Fblob%2Fmain%2FEnglish%2FAPI%2FServices%2FWhiteboard%2Fcode.html&style=default&type=code&showBorder=on&showLineNumbers=on&showFullPath=on&showCopy=on"></script> 
+  </div>
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible3");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content3 = this.nextElementSibling;
+    if (content3.style.display === "block") {
+      content3.style.display = "none";
+    } else {
+      content3.style.display = "block";
+    }
+  });
+}
+</script>
+</div>
+</div>
+
+<div id="main">
+  <div class="contentbox">
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()" style="" class="navbutton">&#9776;</span>
+  <br><br>
+  <h1>JstMStudio-documentatie</h1>
+<p>Hoi! Welkom bij JstMStudio-documentatie! Een plek om enkele nuttige artikelen te krijgen en alles wat je nodig hebt om te gebruiken, bij te dragen aan het project en dergelijke, met trots geschreven door ons team. U kunt hier veel nuttige artikelen vinden die u kunnen helpen met uw vraag. Bekijk hier alle artikelen voordat u contact met ons opneemt voor ondersteuning. We kunnen u hierheen terugleiden.</p>
+<br>
+<hr>
+<br>
+<h2>Artikelen</h2>
+    	  <div class="dropdown">
+  <button class="dropbtn">All Pages <i class='bx bxs-caret-down-circle'></i></button>
+  <div class="dropdown-content">
+  <a onclick="openNav11()">Over</a>
+  <a onclick="openNav1()">Contact</a>
+  <a onclick="openNav2()">Bijdragen</a>
+  <a onclick="openNav3()">Donatie</a>
+  <a onclick="openNav4()">Veelgestelde vragen</a>
+  <a onclick="openNav5()">Help-artikelen</a>
+  <a onclick="openNav7()">Profielextensie</a>
+  <a onclick="openNav8()">API</a>
+  </div>
+</div>
+  <br>
+<script>
+function openNav11() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav11() {
+  document.getElementById("myNav").style.width = "0%";
+}
+
+function openNav1() {
+  document.getElementById("myNav1").style.width = "100%";
+}
+
+function closeNav1() {
+  document.getElementById("myNav1").style.width = "0%";
+}
+
+function openNav2() {
+  document.getElementById("myNav2").style.width = "100%";
+}
+
+function closeNav2() {
+  document.getElementById("myNav2").style.width = "0%";
+}
+
+function openNav3() {
+  document.getElementById("myNav3").style.width = "100%";
+}
+
+function closeNav3() {
+  document.getElementById("myNav3").style.width = "0%";
+}
+
+function openNav4() {
+  document.getElementById("myNav4").style.width = "100%";
+}
+
+function closeNav4() {
+  document.getElementById("myNav4").style.width = "0%";
+}
+
+function openNav5() {
+  document.getElementById("myNav5").style.width = "100%";
+}
+
+function closeNav5() {
+  document.getElementById("myNav5").style.width = "0%";
+}
+
+function openNav6() {
+  document.getElementById("myNav6").style.width = "100%";
+}
+
+function closeNav6() {
+  document.getElementById("myNav6").style.width = "0%";
+}
+
+function openNav7() {
+  document.getElementById("myNav7").style.width = "100%";
+}
+
+function closeNav7() {
+  document.getElementById("myNav7").style.width = "0%";
+}
+
+function openNav8() {
+  document.getElementById("myNav8").style.width = "100%";
+}
+
+function closeNav8() {
+  document.getElementById("myNav8").style.width = "0%";
+}
+</script>
+  </div>
+</div>
+
+<button type="button" class="collapsible" style="margin-top:60px;"><h3>&#9776; Thema-aanpassing</h3></button>
+<div class="content">
+<p>Tekstkleur</p>
+<button onclick="myFunction11()" style="background-color: black;" class="button2"></button>
+<button onclick="myFunction12()" style="background-color: red;" class="button2"></button>
+<button onclick="myFunction13()" style="background-color: blue;" class="button2"></button>
+<button onclick="myFunction14()" style="background-color: green;" class="button2"></button>
+<button onclick="myFunction15()" style="background-color: yellow;" class="button2"></button>
+<button onclick="myFunction16()" style="background-color: orange;" class="button2"></button>
+<button onclick="myFunction17()" style="background-color: purple;" class="button2"></button>
+<button onclick="myFunction18()" style="background-color: magenta;" class="button2"></button>
+<br>
+<br>
+    <p>Achtergrondthema's</p>
+<button onclick="myFunction()" style="background-color: black;" class="button2"></button>
+<button onclick="myFunction2()" style="background-color: red;" class="button2"></button>
+<button onclick="myFunction3()" style="background-color: blue;" class="button2"></button>
+<button onclick="myFunction4()" style="background-color: green;" class="button2"></button>
+<button onclick="myFunction5()" style="background-color: yellow;" class="button2"></button> 
+<button onclick="myFunction6()" style="background-color: orange;" class="button2"></button>
+<button onclick="myFunction7()" style="background-color: purple;" class="button2"></button>
+<button onclick="myFunction8()" style="background-color: magenta;" class="button2"></button>
+</div>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+
+function myFunction2() {
+   var element = document.body;
+   element.classList.toggle("red-mode");
+}
+
+function myFunction3() {
+   var element = document.body;
+   element.classList.toggle("blue-mode");
+}
+
+function myFunction4() {
+   var element = document.body;
+   element.classList.toggle("green-mode");
+}
+
+function myFunction5() {
+   var element = document.body;
+   element.classList.toggle("yellow-mode");
+}
+
+function myFunction6() {
+   var element = document.body;
+   element.classList.toggle("orange-mode");
+}
+
+function myFunction7() {
+   var element = document.body;
+   element.classList.toggle("purple-mode");
+}
+
+function myFunction8() {
+   var element = document.body;
+   element.classList.toggle("magenta-mode");
+}
+  
+function myFunction11() {
+   var element = document.body;
+   element.classList.toggle("text-black");
+}  
+
+function myFunction12() {
+   var element = document.body;
+   element.classList.toggle("text-red");
+}  
+
+function myFunction13() {
+   var element = document.body;
+   element.classList.toggle("text-blue");
+}  
+
+function myFunction14() {
+   var element = document.body;
+   element.classList.toggle("text-green");
+}  
+
+function myFunction15() {
+   var element = document.body;
+   element.classList.toggle("text-yellow");
+}  
+
+function myFunction16() {
+   var element = document.body;
+   element.classList.toggle("text-orange");
+}  
+
+function myFunction17() {
+   var element = document.body;
+   element.classList.toggle("text-purple");
+}  
+
+function myFunction18() {
+   var element = document.body;
+   element.classList.toggle("text-magenta");
+}  
+</script>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "100%";
+  document.getElementById("main").style.marginLeft = "100%";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+  
+  <script src="https://swetrix.org/swetrix.js" defer></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    swetrix.init('13a2nGRC9iGh')
+    swetrix.trackViews()
+  })
+</script>
+<noscript>
+  <img
+    src="https://api.swetrix.com/log/noscript?pid=bbS0szbjjP2r"
+    alt=""
+    referrerpolicy="no-referrer-when-downgrade"
+  />
+</noscript>
+   
+</body>
+</html> 
