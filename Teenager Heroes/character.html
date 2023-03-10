@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Character</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+font-family: Arial;
+padding: 15px;
+background-color: #00C9A7;
+background-image: url("https://github.com/JstMStudio/Teenager-Heroes/blob/Github-Pages/images/background2.jpeg?raw=true");
+background-repeat:no-repeat;
+  background-position: right top;
+  background-attachment: fixed;
+  background-size: cover;
+    background-position: center;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #abff03;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  color: #961509;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid red;
+  border-top: none;
+  text-align: center;
+  height: 100%;
+  background-color: black;;
+background-repeat: no-repeat;
+background-size: 100% auto;
+    background-position: center;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 4px 4px 4px 32px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #ffd3ec;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+  
+  .collapsible {
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align:  center;
+  outline: none;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.active, .collapsible:hover {
+  background-color: green;
+}
+
+.content1 {
+  padding: 18px;
+  display: none;
+  overflow: hidden;
+  background-color: yellow;
+  text-align: center;
+}
+
+.content1 ul {
+text-align: left;
+}
+</style>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+   <h2 style="color:#c4f7fb;text-align:center;">Heróis adolescentes</h2>
+   <a href="index.html">Página inicial</a>
+   <a href="about.html">Sobre</a>
+   <a href="news.html">Notícias</a>
+   <a href="character.html">Personagem</a>
+   <a href="story.html">História</a>
+   <a href="location.html">Localização</a>
+   <a href="vehicles.html">Veículos</a>
+</div>
+
+<div class="tab">
+<button class="tablinks" onclick="openNav()">&#9776;</button>
+   <button class="tablinks" onclick="openCity(event, 'TH')">Heróis adolescentes</button>
+   <button class="tablinks" onclick="openCity(event, 'THC')">Heróis adolescentes: crianças</button>
+   <button class="tablinks" onclick="openCity(event, 'THA')">Heróis adolescentes: adultos</button>
+   <button class="tablinks" onclick="openCity(event, 'VRTH')">Heróis adolescentes de realidade virtual</button>
+</div>
+<div style="font-weight:bold;background-color: blue;text-align: center;color:yellow;padding:10px;">
+   <h1>Anúncio de heróis adolescentes</h1>
+   <p id="announcements"></p>
+</div>
+
+<div id="TH" class="tabcontent">
+<div style="color: #080691;background-color:#00fcf8;margin:18px;padding:1px;">
+<h3>Tienerhelden</h3>
+</div>
+<br>
+<div style="color: #080691;background-color:#00fcf8;margin:18px;padding:10px;">
+<h1>Tekens</h1>
+<p>Teenager Heroes-boekenserie bevatte veel personages in veel verhalen en seizoenen. De boekenreeks van Teenager Heroes bevat veel geweldig ontworpen personages die zijn ontwikkeld door het Teenager Heroes-team. Al onze personages in alle Teenager Heroes-verhalen staan hier vermeld:</p>
+</div>
+<br>
+<br>
+<div style="color: #080691;background-color:#00fcf8;margin:18px;padding:10px;text-align:left;">
+<h3 style="text-align:center;">Hu Jie</h3>
+<ul>
+   <li>Naam: Hu Jie</li>
+<li>Geslacht: mannelijk</li>
+<li>Leeftijd: 14</li>
+<li>Etniciteit: Chinees</li>
+<li>Beroep: helden</li>
+<li>Beschrijving: Hu Jie, een dappere en snelle held in Teenager Heroes. De jongere broer van Li Hui.</li>
+<li>Persoonlijkheid:
+   <ul>
+<li>Hij is moedig. Hij beschermde zijn zus als ze in de problemen kwamen en durfde ook ondeugende schurken het hoofd te bieden.</li>
+<li>Hij is ook snel in dingen doen, maar erg ongeduldig in wachten.</li>
+<li>Speels, hij kan speels zijn als hij belangrijke dingen doet. </li>
+<li>Grappig, hij vindt het heerlijk om iedereen aan het lachen te maken, vooral zijn zus.</li>
+   </ul>
+   </li>
+<li>Zwakte:
+   <ul>
+<li>Ongeduldig, hij is meestal ongeduldig en kon niet op anderen wachten.</li>
+   </ul>
+<li>Vermogen:
+<ul>
+   <li>Snelheid
+   <li>Lopen, hij kon heel snel van locatie A naar locatie B rennen in korte tijd. Hij kon zo snel als de bliksem rennen. </li>
+   <li>Tornado, hij zou heel snel kunnen rennen om een kleine tornado te creëren in een klein gebied dat sterke wind zal veroorzaken. </li>
+   <li>Energiegenerator, hij kon met zijn snelheid elektrische energie opwekken die een gebouw zonder stroom kon herstellen.</li>
+   </ul>
+   </li>
+<li>Gadget:
+   <ul>
+<li>Schild, hij kon zichzelf beschermen tegen aanvallen van vijand en schurken door zich achter zijn schild te verschuilen.</li>
+   </ul>
+   </li>
+   </ul>
+   </div>
+   <br>
+   <br>
+<div style="color: #080691;background-color:#00fcf8;margin:18px;padding:10px;text-align:left;">
+   <h3 style="text-align:center;">Li Hui</h3>
+   <ul>
+     <li>Naam: Li Hui</li>
+     <li>Geslacht: vrouwelijk</li>
+     <li>Leeftijd: 14</li>
+     <li>Etniciteit: Chinees</li>
+   <li>Beroep: helden</li>
+   <li>Beschrijving: Li Hui, de oudere zus van Hu Jie. Een verlegen maar slimme held in de Teenager Heroes. </li>
+   <li>Persoonlijkheid:
+     <ul>
+     <li>Li Hui is slim, ze lost elk moeilijk probleem gemakkelijk op.</li>
+     <li>Li Hui is ook verlegen, ze is bang voor de meeste mensen die ze ontmoet.</li>
+     <li>Lief en Voorzichtig, ze kon voorzichtig zijn met de zorg voor haar jongere broertje.</li>
+     </ul>
+   </li>
+   <li>Zwakte:
+     <ul>
+     <li>Verlegen, ze is bang voor de meeste vijanden. Ze laat zich gemakkelijk afschrikken door enge vijanden.</li>
+     </ul>
+   </li>
+<li>Kracht
+   <ul>
+     <li>Technologie
+       <ul>
+<li>Computeren, ze zou wat computerwerk kunnen doen, zoals het opzetten van een computer, enz. Ze zou een nieuwe computer kunnen opzetten om dingen te doen die ze nodig heeft.</li>
+<li>Hacken, ze kan andere technologie-infrastructuur hacken en deze ontoegankelijk of onveilige software maken.</li>
+       </ul>
+     </li>
+   </ul>
+   </li>
+<li>Gadget
+   <ul>
+<li>Bots, ze heeft altijd 2 bots die haar vergezellen die kunnen helpen met het dragen van spullen, haar verdedigen enz. Ze kan de bots programmeren om te doen wat ze nodig heeft.</li>
+   </ul>
+   </li>
+   </ul>
+   </div>
+   <br>
+   <br>
+<div style="color: #080691;background-color:#00fcf8;margin:18px;padding:10px;text-align:left;">
+   <h3 style="text-align:center;">Min Li</h3>
+   <ul>
+   <li>Naam: Min Li</li>
+   <li>Geslacht: vrouwelijk</li>
+   <li>Leeftijd: 21</li>
+   <li>Etniciteit: Chinees</li>
+   <Li>Beroep: helden</li>
+   <li>Beschrijving: Min Li, de zus van Li Hui en Hu Jie is een held en universiteitsstudent.</li>
+   <li>Persoonlijkheid: <ul>
+     <li>Min Li is slim, ze heeft altijd een manier om eventuele problemen op te lossen.</li>
+     <li>Min Li is voorzichtig, ze zorgt altijd voor haar jongere broers en zussen, wat er ook gebeurt.</li>
+     <li>Min Li heeft ook een goede manier van doen, ze is altijd respectvol en beleefd tegen iedereen en hun gevoelens.</li>
+     </ul>
+   </li>
+   <li>Zwakte<ul>
+   <li>Langzaam, Min Li is erg traag in alles, waardoor de schurken gemakkelijk kunnen ontsnappen.</li>
+     </ul>
+   </li>
+   <li>Kracht<ul>
+   <li>Creatief<ul>
+   <li>Tekenen, Min Li kon alles tekenen wat ze wilde en er binnen enkele minuten een fysiek product van maken.</li>
+   <li>Ontwerpen, Min Li is erg goed in het ontwerpen van items. Min Li kon met haar kracht elk item ontwerpen dat ze maar wilde.</li>
+     </ul>
+     </li>
+     </ul>
+     </li>
+   <li>Gadget<ul>
+   <li>Tekenpen, dit is een pen voor Min Li om alles te tekenen wat ze wil en het te realiseren.</li>
+     </ul>
+     </li>
+     </ul>
+     </div>
+     <br>
+     <br>
+<div style="color: #080691;background-color:#00fcf8;margin:18px;padding:10px;text-align:left;">
+<h3 style="text-align:center;">Hua Mei</h3>
+     <ul>
+       <li>Naam: Hua Mei</li>
+       <li>Geslacht: vrouwelijk</li>
+       <li>Leeftijd: 40</li>
+       <li>Etniciteit: Chinees</li>
+       <li>Beroep: Helden, Wetenschapper</li>
+       <li>Beschrijving: de moeder van Li Hui, Hu Jie en Min Li, een held in Perle.</li>
+       <li>Persoonlijkheid:<ul>
+       <li>Vriendelijkheid, Hua Mei is heel vriendelijk voor haar kinderen en alle anderen. Hua Mei is ook altijd erg aardig voor Min Li, Li Hui en Hu Jie.</li>
+       <li>Eerlijk, Hua Mei is heel eerlijk terwijl ze dingen doet. Ze zal haar fout vertellen en zich daarvoor verontschuldigen en zal nooit liegen.</li>
+       <li>Intelligent, Hua Mei is erg intelligent en slim. Ze kon alle problemen of problemen die ze tegenkwam overal en altijd oplossen.</li>
+         </ul>
+       </li>
+       <li>Zwakte<ul>
+       <li>Kwetsbaar, Hua Mei is erg kwetsbaar voor doelwitten, ziekte en wordt vaak onverwacht uitgebuit.</li>
+         </ul>
+       </li>
+       <li>Kracht<ul>
+         <li>Technisch gezien kon Hua Mei elk type item maken dat ze maar wilde.</li>
+         </ul>
+       </li>
+       <li>Gadget<ul>
+       <li>Solidizer, Hua Mei kon elk type object en item afdrukken dat ze maakte om te gebruiken.</li>
+     </ul>
+   </li>
+   </ul>
+   </div>
+   <br>
+   <br>
+<div style="color: #080691;background-color:#00fcf8;margin:18px;padding:10px;text-align:left;">
+     <h3 style="text-align:center;">Ming Hao</h3>
+     <ul>
+       <li>Naam: Ming Hao</li>
+       <li>Geslacht: mannelijk</li>
+       <li>Leeftijd: 40</li>
+       <li>Etniciteit: Chinees</li>
+       <li>Beroep: Helden, Wetenschapper</li>
+       <li>Beschrijving: de vader van de drie Chinese broers en zussen, Li Hui, Hu Jie en Min Li, een held in Perle.</li>
+       <li>Persoonlijkheid: <ul>
+       <li>Beschermend, Ming Hao is erg beschermend voor zijn kinderen, Min Li, Hu Jie en Li Hui. Hij beschermt zijn kinderen altijd tegen alle problemen en schade.</li>
+       <li>Vriendelijk, Ming Hao is erg aardig voor zijn kinderen en vrienden. Hij gebruikt ook altijd vriendelijke woorden.</li>
+       <li>Behulpzaam, Ming Hao is erg behulpzaam. Ming Hao hielp altijd met alles wat hij kon, wat er ook gebeurde.</li>
+         </ul>
+       </li>
+       <li>Zwakte<ul>
+         <li>Vergeetachtig, Ming Hao is erg vergeetachtig en vergeet altijd dingen die hij nodig had.</li>
+         </ul>
+       </li>
+       <li>Kracht<ul>
+       <li>Superkracht, Ming Hao heeft superkracht en kan door alles slaan en tillen wat hij maar wil.</li>
+         </ul>
+       </li>
+       <li>Gadget<ul>
+         <li>Speciale handschoenen, Ming Hao heeft speciale handschoenen waarmee Ming Hao superkracht kan gebruiken.</li>
+         </ul>
+       </li>
+    </div>
+</div>
+</div>
+
+<div id="THC" class="tabcontent">
+<div style="color: #1c2b03;background-color:#99f505;margin:18px;padding:1px;">
+<h3>Teenager Heroes: kinderen</h3>
+</div>
+<br>
+   <div style="color: #1c2b03;background-color:#99f505;margin:18px;padding:10px;">
+     <h1>Tekens</h1>
+<p>Teenager Heroes-boekenserie bevatte veel personages in veel verhalen en seizoenen. De boekenreeks van Teenager Heroes bevat veel geweldig ontworpen personages die zijn ontwikkeld door het Teenager Heroes-team. Al onze personages in alle Teenager Heroes-verhalen staan hier vermeld:</p>
+</div>
+<br>
+<br>
+<div style="color: #1c2b03;background-color:#99f505;margin:18px;padding:10px;text-align:left;">
+<h3 style="text-align:center;">Hu Jie</h3>
+<ul>
+   <li>Naam: Hu Jie</li>
+<li>Geslacht: mannelijk</li>
+<li>Leeftijd: 14</li>
+<li>Etniciteit: Chinees</li>
+<li>Beroep: helden</li>
+<li>Beschrijving: Hu Jie, een dappere en snelle held in Teenager Heroes. De jongere broer van Li Hui.</li>
+<li>Persoonlijkheid:
+   <ul>
+<li>Hij is moedig. Hij beschermde zijn zus als ze in de problemen kwamen en durfde ook ondeugende schurken het hoofd te bieden.</li>
+<li>Hij is ook snel in dingen doen, maar erg ongeduldig in wachten.</li>
+<li>Speels, hij kan speels zijn als hij belangrijke dingen doet. </li>
+<li>Grappig, hij vindt het heerlijk om iedereen aan het lachen te maken, vooral zijn zus.</li>
+   </ul>
+   </li>
+<li>Zwakte:
+   <ul>
+<li>Ongeduldig, hij is meestal ongeduldig en kon niet op anderen wachten.</li>
+   </ul>
+<li>Vermogen:
+<ul>
+   <li>Snelheid
+   <li>Lopen, hij kon heel snel van locatie A naar locatie B rennen in korte tijd. Hij kon zo snel als de bliksem rennen. </li>
+   <li>Tornado, hij zou heel snel kunnen rennen om een kleine tornado te creëren in een klein gebied dat sterke wind zal veroorzaken. </li>
+   <li>Energiegenerator, hij kon met zijn snelheid elektrische energie opwekken die een gebouw zonder stroom kon herstellen.</li>
+   </ul>
+   </li>
+<li>Gadget:
+   <ul>
+<li>Schild, hij kon zichzelf beschermen tegen aanvallen van vijand en schurken door zich achter zijn schild te verschuilen.</li>
+   </ul>
+   </li>
+   </ul>
+   </div>
+   <br>
+   <br>
+<div style="color: #1c2b03;background-color:#99f505;margin:18px;padding:10px;text-align:left;">
+   <h3 style="text-align:center;">Li Hui</h3>
+   <ul>
+     <li>Naam: Li Hui</li>
+     <li>Geslacht: vrouwelijk</li>
+     <li>Leeftijd: 14</li>
+     <li>Etniciteit: Chinees</li>
+   <li>Beroep: helden</li>
+   <li>Beschrijving: Li Hui, de oudere zus van Hu Jie. Een verlegen maar slimme held in de Teenager Heroes. </li>
+   <li>Persoonlijkheid:
+     <ul>
+     <li>Li Hui is slim, ze lost elk moeilijk probleem gemakkelijk op.</li>
+     <li>Li Hui is ook verlegen, ze is bang voor de meeste mensen die ze ontmoet.</li>
+     <li>Lief en Voorzichtig, ze kon voorzichtig zijn met de zorg voor haar jongere broertje.</li>
+     </ul>
+   </li>
+   <li>Zwakte:
+     <ul>
+     <li>Verlegen, ze is bang voor de meeste vijanden. Ze laat zich gemakkelijk afschrikken door enge vijanden.</li>
+     </ul>
+   </li>
+<li>Kracht
+   <ul>
+     <li>Technologie
+       <ul>
+<li>Computeren, ze zou wat computerwerk kunnen doen, zoals het opzetten van een computer, enz. Ze zou een nieuwe computer kunnen opzetten om dingen te doen die ze nodig heeft.</li>
+<li>Hacken, ze kan andere technologie-infrastructuur hacken en deze ontoegankelijk of onveilige software maken.</li>
+       </ul>
+     </li>
+   </ul>
+   </li>
+<li>Gadget
+   <ul>
+<li>Bots, ze heeft altijd 2 bots die haar vergezellen die kunnen helpen met het dragen van spullen, haar verdedigen enz. Ze kan de bots programmeren om te doen wat ze nodig heeft.</li>
+   </ul>
+   </li>
+   </ul>
+   </div>
+   <br>
+   <br>
+<div style="color: #1c2b03;background-color:#99f505;margin:18px;padding:10px;text-align:left;">
+   <h3 style="text-align:center;">Min Li</h3>
+   <ul>
+   <li>Naam: Min Li</li>
+   <li>Geslacht: vrouwelijk</li>
+   <li>Leeftijd: 21</li>
+   <li>Etniciteit: Chinees</li>
+   <Li>Beroep: helden</li>
+   <li>Beschrijving: Min Li, de zus van Li Hui en Hu Jie is een held en universiteitsstudent.</li>
+   <li>Persoonlijkheid: <ul>
+     <li>Min Li is slim, ze heeft altijd een manier om eventuele problemen op te lossen.</li>
+     <li>Min Li is voorzichtig, ze zorgt altijd voor haar jongere broers en zussen, wat er ook gebeurt.</li>
+     <li>Min Li heeft ook een goede manier van doen, ze is altijd respectvol en beleefd tegen iedereen en hun gevoelens.</li>
+     </ul>
+   </li>
+   <li>Zwakte<ul>
+   <li>Langzaam, Min Li is erg traag in alles, waardoor de schurken gemakkelijk kunnen ontsnappen.</li>
+     </ul>
+   </li>
+   <li>Kracht<ul>
+   <li>Creatief<ul>
+   <li>Tekenen, Min Li kon alles tekenen wat ze wilde en er binnen enkele minuten een fysiek product van maken.</li>
+   <li>Ontwerpen, Min Li is erg goed in het ontwerpen van items. Min Li kon met haar kracht elk item ontwerpen dat ze maar wilde.</li>
+     </ul>
+     </li>
+     </ul>
+     </li>
+   <li>Gadget<ul>
+   <li>Tekenpen, dit is een pen voor Min Li om alles te tekenen wat ze wil en het te realiseren.</li>
+     </ul>
+     </li>
+     </ul>
+     </div>
+     <br>
+     <br>
+<div style="color: #1c2b03;background-color:#99f505;margin:18px;padding:10px;text-align:left;">
+<h3 style="text-align:center;">Hua Mei</h3>
+     <ul>
+       <li>Naam: Hua Mei</li>
+       <li>Geslacht: vrouwelijk</li>
+       <li>Leeftijd: 40</li>
+       <li>Etniciteit: Chinees</li>
+       <li>Beroep: Helden, Wetenschapper</li>
+       <li>Beschrijving: de moeder van Li Hui, Hu Jie en Min Li, een held in Perle.</li>
+       <li>Persoonlijkheid:<ul>
+       <li>Vriendelijkheid, Hua Mei is heel vriendelijk voor haar kinderen en alle anderen. Hua Mei is ook altijd erg aardig voor Min Li, Li Hui en Hu Jie.</li>
+       <li>Eerlijk, Hua Mei is heel eerlijk terwijl ze dingen doet. Ze zal haar fout vertellen en zich daarvoor verontschuldigen en zal nooit liegen.</li>
+       <li>Intelligent, Hua Mei is erg intelligent en slim. Ze kon alle problemen of problemen die ze tegenkwam overal en altijd oplossen.</li>
+         </ul>
+       </li>
+       <li>Zwakte<ul>
+       <li>Kwetsbaar, Hua Mei is erg kwetsbaar voor doelwitten, ziekte en wordt vaak onverwacht uitgebuit.</li>
+         </ul>
+       </li>
+       <li>Kracht<ul>
+         <li>Technisch gezien kon Hua Mei elk type item maken dat ze maar wilde.</li>
+         </ul>
+       </li>
+       <li>Gadget<ul>
+       <li>Solidizer, Hua Mei kon elk type object en item afdrukken dat ze maakte om te gebruiken.</li>
+     </ul>
+   </li>
+   </ul>
+   </div>
+   <br>
+   <br>
+<div style="color: #1c2b03;background-color:#99f505;margin:18px;padding:10px;text-align:left;">
+     <h3 style="text-align:center;">Ming Hao</h3>
+     <ul>
+       <li>Naam: Ming Hao</li>
+       <li>Geslacht: mannelijk</li>
+       <li>Leeftijd: 40</li>
+       <li>Etniciteit: Chinees</li>
+       <li>Beroep: Helden, Wetenschapper</li>
+       <li>Beschrijving: de vader van de drie Chinese broers en zussen, Li Hui, Hu Jie en Min Li, een held in Perle.</li>
+       <li>Persoonlijkheid: <ul>
+       <li>Beschermend, Ming Hao is erg beschermend voor zijn kinderen, Min Li, Hu Jie en Li Hui. Hij beschermt zijn kinderen altijd tegen alle problemen en schade.</li>
+       <li>Vriendelijk, Ming Hao is erg aardig voor zijn kinderen en vrienden. Hij gebruikt ook altijd vriendelijke woorden.</li>
+       <li>Behulpzaam, Ming Hao is erg behulpzaam. Ming Hao hielp altijd met alles wat hij kon, wat er ook gebeurde.</li>
+         </ul>
+       </li>
+       <li>Zwakte<ul>
+         <li>Vergeetachtig, Ming Hao is erg vergeetachtig en vergeet altijd dingen die hij nodig had.</li>
+         </ul>
+       </li>
+       <li>Kracht<ul>
+       <li>Superkracht, Ming Hao heeft superkracht en kan door alles slaan en tillen wat hij maar wil.</li>
+         </ul>
+       </li>
+       <li>Gadget<ul>
+         <li>Speciale handschoenen, Ming Hao heeft speciale handschoenen waarmee Ming Hao superkracht kan gebruiken.</li>
+         </ul>
+       </li>
+    </div>
+  </div>
+</div>
+
+<div id="THA" class="tabcontent">
+<div style="color: #6b1005;background-color:pink;margin:18px;padding:1px;">
+<h3>Teenager Heroes: volwassene</h3>
+</div>
+<br>
+   <div style="color: #6b1005;background-color:pink;margin:18px;padding:10px;">
+     <h1>Tekens</h1>
+<p>Teenager Heroes-boekenserie bevatte veel personages in veel verhalen en seizoenen. De boekenreeks van Teenager Heroes bevat veel geweldig ontworpen personages die zijn ontwikkeld door het Teenager Heroes-team. Al onze personages in alle Teenager Heroes-verhalen staan hier vermeld:</p>
+</div>
+<br>
+<br>
+<div style="color: #6b1005;background-color:pink;margin:18px;padding:10px;text-align:left;">
+<h3 style="text-align:center;">Hu Jie</h3>
+<ul>
+   <li>Naam: Hu Jie</li>
+<li>Geslacht: mannelijk</li>
+<li>Leeftijd: 14</li>
+<li>Etniciteit: Chinees</li>
+<li>Beroep: helden</li>
+<li>Beschrijving: Hu Jie, een dappere en snelle held in Teenager Heroes. De jongere broer van Li Hui.</li>
+<li>Persoonlijkheid:
+   <ul>
+<li>Hij is moedig. Hij beschermde zijn zus als ze in de problemen kwamen en durfde ook ondeugende schurken het hoofd te bieden.</li>
+<li>Hij is ook snel in dingen doen, maar erg ongeduldig in wachten.</li>
+<li>Speels, hij kan speels zijn als hij belangrijke dingen doet. </li>
+<li>Grappig, hij vindt het heerlijk om iedereen aan het lachen te maken, vooral zijn zus.</li>
+   </ul>
+   </li>
+<li>Zwakte:
+   <ul>
+<li>Ongeduldig, hij is meestal ongeduldig en kon niet op anderen wachten.</li>
+   </ul>
+<li>Vermogen:
+<ul>
+   <li>Snelheid
+   <li>Lopen, hij kon heel snel van locatie A naar locatie B rennen in korte tijd. Hij kon zo snel als de bliksem rennen. </li>
+   <li>Tornado, hij zou heel snel kunnen rennen om een kleine tornado te creëren in een klein gebied dat sterke wind zal veroorzaken. </li>
+   <li>Energiegenerator, hij kon met zijn snelheid elektrische energie opwekken die een gebouw zonder stroom kon herstellen.</li>
+   </ul>
+   </li>
+<li>Gadget:
+   <ul>
+<li>Schild, hij kon zichzelf beschermen tegen aanvallen van vijand en schurken door zich achter zijn schild te verschuilen.</li>
+   </ul>
+   </li>
+   </ul>
+   </div>
+   <br>
+   <br>
+<div style="color: #6b1005;background-color:pink;margin:18px;padding:10px;text-align:left;">
+   <h3 style="text-align:center;">Li Hui</h3>
+   <ul>
+     <li>Naam: Li Hui</li>
+     <li>Geslacht: vrouwelijk</li>
+     <li>Leeftijd: 14</li>
+     <li>Etniciteit: Chinees</li>
+   <li>Beroep: helden</li>
+   <li>Beschrijving: Li Hui, de oudere zus van Hu Jie. Een verlegen maar slimme held in de Teenager Heroes. </li>
+   <li>Persoonlijkheid:
+     <ul>
+     <li>Li Hui is slim, ze lost elk moeilijk probleem gemakkelijk op.</li>
+     <li>Li Hui is ook verlegen, ze is bang voor de meeste mensen die ze ontmoet.</li>
+     <li>Lief en Voorzichtig, ze kon voorzichtig zijn met de zorg voor haar jongere broertje.</li>
+     </ul>
+   </li>
+   <li>Zwakte:
+     <ul>
+     <li>Verlegen, ze is bang voor de meeste vijanden. Ze laat zich gemakkelijk afschrikken door enge vijanden.</li>
+     </ul>
+   </li>
+<li>Kracht
+   <ul>
+     <li>Technologie
+       <ul>
+<li>Computeren, ze zou wat computerwerk kunnen doen, zoals het opzetten van een computer, enz. Ze zou een nieuwe computer kunnen opzetten om dingen te doen die ze nodig heeft.</li>
+<li>Hacken, ze kan andere technologie-infrastructuur hacken en deze ontoegankelijk of onveilige software maken.</li>
+       </ul>
+     </li>
+   </ul>
+   </li>
+<li>Gadget
+   <ul>
+<li>Bots, ze heeft altijd 2 bots die haar vergezellen die kunnen helpen met het dragen van spullen, haar verdedigen enz. Ze kan de bots programmeren om te doen wat ze nodig heeft.</li>
+   </ul>
+   </li>
+   </ul>
+   </div>
+   <br>
+   <br>
+<div style="color: #6b1005;background-color:pink;margin:18px;padding:10px;text-align:left;">
+   <h3 style="text-align:center;">Min Li</h3>
+   <ul>
+   <li>Naam: Min Li</li>
+   <li>Geslacht: vrouwelijk</li>
+   <li>Leeftijd: 21</li>
+   <li>Etniciteit: Chinees</li>
+   <Li>Beroep: helden</li>
+   <li>Beschrijving: Min Li, de zus van Li Hui en Hu Jie is een held en universiteitsstudent.</li>
+   <li>Persoonlijkheid: <ul>
+     <li>Min Li is slim, ze heeft altijd een manier om eventuele problemen op te lossen.</li>
+     <li>Min Li is voorzichtig, ze zorgt altijd voor haar jongere broers en zussen, wat er ook gebeurt.</li>
+     <li>Min Li heeft ook een goede manier van doen, ze is altijd respectvol en beleefd tegen iedereen en hun gevoelens.</li>
+     </ul>
+   </li>
+   <li>Zwakte<ul>
+   <li>Langzaam, Min Li is erg traag in alles, waardoor de schurken gemakkelijk kunnen ontsnappen.</li>
+     </ul>
+   </li>
+   <li>Kracht<ul>
+   <li>Creatief<ul>
+   <li>Tekenen, Min Li kon alles tekenen wat ze wilde en er binnen enkele minuten een fysiek product van maken.</li>
+   <li>Ontwerpen, Min Li is erg goed in het ontwerpen van items. Min Li kon met haar kracht elk item ontwerpen dat ze maar wilde.</li>
+     </ul>
+     </li>
+     </ul>
+     </li>
+   <li>Gadget<ul>
+   <li>Tekenpen, dit is een pen voor Min Li om alles te tekenen wat ze wil en het te realiseren.</li>
+     </ul>
+     </li>
+     </ul>
+     </div>
+     <br>
+     <br>
+<div style="color: #6b1005;background-color:pink;margin:18px;padding:10px;text-align:left;">
+<h3 style="text-align:center;">Hua Mei</h3>
+     <ul>
+       <li>Naam: Hua Mei</li>
+       <li>Geslacht: vrouwelijk</li>
+       <li>Leeftijd: 40</li>
+       <li>Etniciteit: Chinees</li>
+       <li>Beroep: Helden, Wetenschapper</li>
+       <li>Beschrijving: de moeder van Li Hui, Hu Jie en Min Li, een held in Perle.</li>
+       <li>Persoonlijkheid:<ul>
+       <li>Vriendelijkheid, Hua Mei is heel vriendelijk voor haar kinderen en alle anderen. Hua Mei is ook altijd erg aardig voor Min Li, Li Hui en Hu Jie.</li>
+       <li>Eerlijk, Hua Mei is heel eerlijk terwijl ze dingen doet. Ze zal haar fout vertellen en zich daarvoor verontschuldigen en zal nooit liegen.</li>
+       <li>Intelligent, Hua Mei is erg intelligent en slim. Ze kon alle problemen of problemen die ze tegenkwam overal en altijd oplossen.</li>
+         </ul>
+       </li>
+       <li>Zwakte<ul>
+       <li>Kwetsbaar, Hua Mei is erg kwetsbaar voor doelwitten, ziekte en wordt vaak onverwacht uitgebuit.</li>
+         </ul>
+       </li>
+       <li>Kracht<ul>
+         <li>Technisch gezien kon Hua Mei elk type item maken dat ze maar wilde.</li>
+         </ul>
+       </li>
+       <li>Gadget<ul>
+       <li>Solidizer, Hua Mei kon elk type object en item afdrukken dat ze maakte om te gebruiken.</li>
+     </ul>
+   </li>
+   </ul>
+   </div>
+   <br>
+   <br>
+<div style="color: #6b1005;background-color:pink;margin:18px;padding:10px;text-align:left;">
+     <h3 style="text-align:center;">Ming Hao</h3>
+     <ul>
+       <li>Naam: Ming Hao</li>
+       <li>Geslacht: mannelijk</li>
+       <li>Leeftijd: 40</li>
+       <li>Etniciteit: Chinees</li>
+       <li>Beroep: Helden, Wetenschapper</li>
+       <li>Beschrijving: de vader van de drie Chinese broers en zussen, Li Hui, Hu Jie en Min Li, een held in Perle.</li>
+       <li>Persoonlijkheid: <ul>
+       <li>Beschermend, Ming Hao is erg beschermend voor zijn kinderen, Min Li, Hu Jie en Li Hui. Hij beschermt zijn kinderen altijd tegen alle problemen en schade.</li>
+       <li>Vriendelijk, Ming Hao is erg aardig voor zijn kinderen en vrienden. Hij gebruikt ook altijd vriendelijke woorden.</li>
+       <li>Behulpzaam, Ming Hao is erg behulpzaam. Ming Hao hielp altijd met alles wat hij kon, wat er ook gebeurde.</li>
+         </ul>
+       </li>
+       <li>Zwakte<ul>
+         <li>Vergeetachtig, Ming Hao is erg vergeetachtig en vergeet altijd dingen die hij nodig had.</li>
+         </ul>
+       </li>
+       <li>Kracht<ul>
+       <li>Superkracht, Ming Hao heeft superkracht en kan door alles slaan en tillen wat hij maar wil.</li>
+         </ul>
+       </li>
+       <li>Gadget<ul>
+         <li>Speciale handschoenen, Ming Hao heeft speciale handschoenen waarmee Ming Hao superkracht kan gebruiken.</li>
+         </ul>
+       </li>
+    </div>
+  </div>
+</div>
+
+<div id="VRTH" class="tabcontent">
+<div style="color: purple;background-color:#a4fc00;margin:18px;padding:1px;">
+<h3>VR-tienerhelden</h3>
+</div>
+<br>
+   <div style="color: purple;background-color:#a4fc00;margin:18px;padding:10px;">
+     <h1>Tekens</h1>
+<p>Teenager Heroes-boekenserie bevatte veel personages in veel verhalen en seizoenen. De boekenreeks van Teenager Heroes bevat veel geweldig ontworpen personages die zijn ontwikkeld door het Teenager Heroes-team. Al onze personages in alle Teenager Heroes-verhalen staan hier vermeld:</p>
+</div>
+<br>
+<br>
+<div style="color: purple;background-color:#a4fc00;margin:18px;padding:10px;text-align:left;">
+<h3 style="text-align:center;">Hu Jie</h3>
+<ul>
+   <li>Naam: Hu Jie</li>
+<li>Geslacht: mannelijk</li>
+<li>Leeftijd: 14</li>
+<li>Etniciteit: Chinees</li>
+<li>Beroep: helden</li>
+<li>Beschrijving: Hu Jie, een dappere en snelle held in Teenager Heroes. De jongere broer van Li Hui.</li>
+<li>Persoonlijkheid:
+   <ul>
+<li>Hij is moedig. Hij beschermde zijn zus als ze in de problemen kwamen en durfde ook ondeugende schurken het hoofd te bieden.</li>
+<li>Hij is ook snel in dingen doen, maar erg ongeduldig in wachten.</li>
+<li>Speels, hij kan speels zijn als hij belangrijke dingen doet. </li>
+<li>Grappig, hij vindt het heerlijk om iedereen aan het lachen te maken, vooral zijn zus.</li>
+   </ul>
+   </li>
+<li>Zwakte:
+   <ul>
+<li>Ongeduldig, hij is meestal ongeduldig en kon niet op anderen wachten.</li>
+   </ul>
+<li>Vermogen:
+<ul>
+   <li>Snelheid
+   <li>Lopen, hij kon heel snel van locatie A naar locatie B rennen in korte tijd. Hij kon zo snel als de bliksem rennen. </li>
+   <li>Tornado, hij zou heel snel kunnen rennen om een kleine tornado te creëren in een klein gebied dat sterke wind zal veroorzaken. </li>
+   <li>Energiegenerator, hij kon met zijn snelheid elektrische energie opwekken die een gebouw zonder stroom kon herstellen.</li>
+   </ul>
+   </li>
+<li>Gadget:
+   <ul>
+<li>Schild, hij kon zichzelf beschermen tegen aanvallen van vijand en schurken door zich achter zijn schild te verschuilen.</li>
+   </ul>
+   </li>
+   </ul>
+   </div>
+   <br>
+   <br>
+   <div style="color: purple;background-color:#a4fc00;margin:18px;padding:10px;text-align:left;">
+   <h3 style="text-align:center;">Li Hui</h3>
+   <ul>
+     <li>Naam: Li Hui</li>
+     <li>Geslacht: vrouwelijk</li>
+     <li>Leeftijd: 14</li>
+     <li>Etniciteit: Chinees</li>
+   <li>Beroep: helden</li>
+   <li>Beschrijving: Li Hui, de oudere zus van Hu Jie. Een verlegen maar slimme held in de Teenager Heroes. </li>
+   <li>Persoonlijkheid:
+     <ul>
+     <li>Li Hui is slim, ze lost elk moeilijk probleem gemakkelijk op.</li>
+     <li>Li Hui is ook verlegen, ze is bang voor de meeste mensen die ze ontmoet.</li>
+     <li>Lief en Voorzichtig, ze kon voorzichtig zijn met de zorg voor haar jongere broertje.</li>
+     </ul>
+   </li>
+   <li>Zwakte:
+     <ul>
+     <li>Verlegen, ze is bang voor de meeste vijanden. Ze laat zich gemakkelijk afschrikken door enge vijanden.</li>
+     </ul>
+   </li>
+<li>Kracht
+   <ul>
+     <li>Technologie
+       <ul>
+<li>Computeren, ze zou wat computerwerk kunnen doen, zoals het opzetten van een computer, enz. Ze zou een nieuwe computer kunnen opzetten om dingen te doen die ze nodig heeft.</li>
+<li>Hacken, ze kan andere technologie-infrastructuur hacken en deze ontoegankelijk of onveilige software maken.</li>
+       </ul>
+     </li>
+   </ul>
+   </li>
+<li>Gadget
+   <ul>
+<li>Bots, ze heeft altijd 2 bots die haar vergezellen die kunnen helpen met het dragen van spullen, haar verdedigen enz. Ze kan de bots programmeren om te doen wat ze nodig heeft.</li>
+   </ul>
+   </li>
+   </ul>
+   </div>
+   <br>
+   <br>
+   <div style="color: purple;background-color:#a4fc00;margin:18px;padding:10px;text-align:left;">
+   <h3 style="text-align:center;">Min Li</h3>
+   <ul>
+   <li>Naam: Min Li</li>
+   <li>Geslacht: vrouwelijk</li>
+   <li>Leeftijd: 21</li>
+   <li>Etniciteit: Chinees</li>
+   <Li>Beroep: helden</li>
+   <li>Beschrijving: Min Li, de zus van Li Hui en Hu Jie is een held en universiteitsstudent.</li>
+   <li>Persoonlijkheid: <ul>
+     <li>Min Li is slim, ze heeft altijd een manier om eventuele problemen op te lossen.</li>
+     <li>Min Li is voorzichtig, ze zorgt altijd voor haar jongere broers en zussen, wat er ook gebeurt.</li>
+     <li>Min Li heeft ook een goede manier van doen, ze is altijd respectvol en beleefd tegen iedereen en hun gevoelens.</li>
+     </ul>
+   </li>
+   <li>Zwakte<ul>
+   <li>Langzaam, Min Li is erg traag in alles, waardoor de schurken gemakkelijk kunnen ontsnappen.</li>
+     </ul>
+   </li>
+   <li>Kracht<ul>
+   <li>Creatief<ul>
+   <li>Tekenen, Min Li kon alles tekenen wat ze wilde en er binnen enkele minuten een fysiek product van maken.</li>
+   <li>Ontwerpen, Min Li is erg goed in het ontwerpen van items. Min Li kon met haar kracht elk item ontwerpen dat ze maar wilde.</li>
+     </ul>
+     </li>
+     </ul>
+     </li>
+   <li>Gadget<ul>
+   <li>Tekenpen, dit is een pen voor Min Li om alles te tekenen wat ze wil en het te realiseren.</li>
+     </ul>
+     </li>
+     </ul>
+     </div>
+     <br>
+     <br>
+     <div style="color: purple;background-color:#a4fc00;margin:18px;padding:10px;text-align:left;">
+<h3 style="text-align:center;">Hua Mei</h3>
+     <ul>
+       <li>Naam: Hua Mei</li>
+       <li>Geslacht: vrouwelijk</li>
+       <li>Leeftijd: 40</li>
+       <li>Etniciteit: Chinees</li>
+       <li>Beroep: Helden, Wetenschapper</li>
+       <li>Beschrijving: de moeder van Li Hui, Hu Jie en Min Li, een held in Perle.</li>
+       <li>Persoonlijkheid:<ul>
+       <li>Vriendelijkheid, Hua Mei is heel vriendelijk voor haar kinderen en alle anderen. Hua Mei is ook altijd erg aardig voor Min Li, Li Hui en Hu Jie.</li>
+       <li>Eerlijk, Hua Mei is heel eerlijk terwijl ze dingen doet. Ze zal haar fout vertellen en zich daarvoor verontschuldigen en zal nooit liegen.</li>
+       <li>Intelligent, Hua Mei is erg intelligent en slim. Ze kon alle problemen of problemen die ze tegenkwam overal en altijd oplossen.</li>
+         </ul>
+       </li>
+       <li>Zwakte<ul>
+       <li>Kwetsbaar, Hua Mei is erg kwetsbaar voor doelwitten, ziekte en wordt vaak onverwacht uitgebuit.</li>
+         </ul>
+       </li>
+       <li>Kracht<ul>
+         <li>Technisch gezien kon Hua Mei elk type item maken dat ze maar wilde.</li>
+         </ul>
+       </li>
+       <li>Gadget<ul>
+       <li>Solidizer, Hua Mei kon elk type object en item afdrukken dat ze maakte om te gebruiken.</li>
+     </ul>
+   </li>
+   </ul>
+   </div>
+   <br>
+   <br>
+   <div style="color: purple;background-color:#a4fc00;margin:18px;padding:10px;text-align:left;">
+     <h3 style="text-align:center;">Ming Hao</h3>
+     <ul>
+       <li>Naam: Ming Hao</li>
+       <li>Geslacht: mannelijk</li>
+       <li>Leeftijd: 40</li>
+       <li>Etniciteit: Chinees</li>
+       <li>Beroep: Helden, Wetenschapper</li>
+       <li>Beschrijving: de vader van de drie Chinese broers en zussen, Li Hui, Hu Jie en Min Li, een held in Perle.</li>
+       <li>Persoonlijkheid: <ul>
+       <li>Beschermend, Ming Hao is erg beschermend voor zijn kinderen, Min Li, Hu Jie en Li Hui. Hij beschermt zijn kinderen altijd tegen alle problemen en schade.</li>
+       <li>Vriendelijk, Ming Hao is erg aardig voor zijn kinderen en vrienden. Hij gebruikt ook altijd vriendelijke woorden.</li>
+       <li>Behulpzaam, Ming Hao is erg behulpzaam. Ming Hao hielp altijd met alles wat hij kon, wat er ook gebeurde.</li>
+         </ul>
+       </li>
+       <li>Zwakte<ul>
+         <li>Vergeetachtig, Ming Hao is erg vergeetachtig en vergeet altijd dingen die hij nodig had.</li>
+         </ul>
+       </li>
+       <li>Kracht<ul>
+       <li>Superkracht, Ming Hao heeft superkracht en kan door alles slaan en tillen wat hij maar wil.</li>
+         </ul>
+       </li>
+       <li>Gadget<ul>
+         <li>Speciale handschoenen, Ming Hao heeft speciale handschoenen waarmee Ming Hao superkracht kan gebruiken.</li>
+         </ul>
+       </li>
+     </ul>
+    </div>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+<script src="announcement.js"></script>
+<!-- Put this at the end of the <body> tag -->
+<script src="https://swetrix.org/swetrix.js" defer></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    swetrix.init('tUOZrSzLs6uA')
+    swetrix.trackViews()
+  })
+</script>
+<noscript>
+  <img
+    src="https://api.swetrix.com/log/noscript?pid=tUOZrSzLs6uA"
+    alt=""
+    referrerpolicy="no-referrer-when-downgrade"
+  />
+</noscript>
+
+</body>
+</html> 
